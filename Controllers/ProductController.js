@@ -14,8 +14,21 @@ module.exports = {
                 return console.dir(error);
             }
             data = JSON.parse(body)
-            console.log(data)
-
+            data.products.map(document => {
+                const product=new ProductModel()
+                product.Category = document.category ;
+                product.Color = document.color ;
+                product.ProductName = document.productName ;
+                product.Price = document.price ;
+                product.Description = document.description ;
+                product.Tag = document.tag ;
+                product.ProductMaterial = document.productMaterial ;
+                product.Reviews = document.reviews ;
+                product.ImageUrl = document.imageUrl ;
+                product.save().then(
+                    res => console.log(res)
+                ).catch(err => console.log(err))
+            })
         });
        
 

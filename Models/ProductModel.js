@@ -6,67 +6,67 @@ const productSchema = mongoose.model('ProductModel',new  mongoose.Schema(
     Color: {
 
       type : String,
-      required : true,
+     // required : true,
     },
     Category:{
         type : String,
-      required : true,
+      //required : true,
     },
     ProductName:{
-        type : Number,
-      required : true,
+        type : String,
+      //required : true,
     },
     Price :
     
       {
         type : String,
-      required : true,
+      //required : true,
 
       },
       Description :
     
       {
         type : String,
-      required : true,
+      //required : true,
 
       },
       Tag :
     
       {
         type : String,
-      required : true,
+      //required : true,
 
       },
     ProductMaterial :
     
       {
         type : String,
-      required : true,
+      //required : true,
 
       },
       ImageUrl :
     
       {
         type : String,
-      required : true,
+      //required : true,
 
       },
-      Createdat :
+      //Createdat :
     
-      {
-        type : String,
-      required : true,
+      //{
+       // type : String,
+      //required : true,
 
-      },
+      //},
       Reviews:
     [
       {Rating:{
         type: String,
-        required: true
+       // required: true
       },
       Content:{
         type:String,
-        required:true
+       // required:true
       }
     }
     ],
